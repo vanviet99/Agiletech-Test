@@ -1,0 +1,15 @@
+.menu_button {
+    border-radius: 50px;
+background: var(--3, #9C69E2);
+box-shadow: 0px 5px 5px 0px rgba(75, 93, 104, 0.10);
+border: none;
+height: 40px;
+width: 150px;
+cursor: pointer;
+color: white;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

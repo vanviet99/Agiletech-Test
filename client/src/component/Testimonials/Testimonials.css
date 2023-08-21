@@ -1,0 +1,16 @@
+.Testimonials_heading{
+    color: #FFF;
+font-family: Helvetica;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 130%; /* 52px */
+text-align: left;
+padding-left: 160px;
+margin-top: 50px;
+padding-top: 50px;
+}
+.Testimonials{
+    border-radius: 50px;
+    background: var(--3, #9C69E2);
+}
