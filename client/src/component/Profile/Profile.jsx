@@ -4,7 +4,7 @@ import './profile.css'
 import axios from 'axios'
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
-
+import { useNavigate } from 'react-router-dom';
 function Profile() {
   const [post ,setPost] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
@@ -179,7 +179,7 @@ const luu =()=>{
   })
 }
 
-
+const nav = useNavigate()
 //phân trang
 
 const goToPage = (page) => {
@@ -187,6 +187,23 @@ const goToPage = (page) => {
     setCurrentPage(page);
   }
 };
+
+const logout = ()=>{
+  const accessToken = localStorage.getItem('accessToken');
+  axios.delete('https://test-react.agiletech.vn/auth/logout', {
+    headers: {
+      'Authorization': `Bearer ${accessToken}`
+    }
+  })
+    .then(response => {
+      localStorage.removeItem('accessToken')
+      localStorage.removeItem('refreshToken')
+      nav('/login')
+    })
+    .catch(error => {
+      console.error('Logout failed', error);
+    });
+}
   return (
     <Grid container className='profile'>
         <Grid item lg={2} sm={12} xs={12} className='profile_2'>
@@ -196,7 +213,7 @@ const goToPage = (page) => {
         </svg>
         <div className='profile2_menu'>
             <button>Post</button>
-            <button>LogOut</button>
+            <button onClick={()=>logout()}>LogOut</button>
         </div>
         </Grid>
         <Grid item lg={10} sm={12} xs={12} className='profile_tab'>
