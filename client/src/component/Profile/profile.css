@@ -124,14 +124,28 @@ margin-top: 0;
 }
 
 @media only screen and (min-width: 601px) and (max-width: 800px){
-    .menu_button {
-        margin: 0px;
+    .profile_2{
+        height: 130px;
+    }
+    .profile2_menu{
+        display: flex;
+        flex-direction: row;
+    }
+    .profile2_menu button{
+margin-top: 0;
     }
 }
 
 @media only screen and (min-width: 801px) and (max-width: 1024px)
 {
-    .menu_button {
-        margin: 0px;
+    .profile_2{
+        height: 130px;
+    }   
+    .profile2_menu{
+        display: flex;
+        flex-direction: row;
+    }
+    .profile2_menu button{
+            margin-top: 0;
     }
 }
