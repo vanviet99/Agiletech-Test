@@ -6,8 +6,12 @@ function Signin() {
     const nav = useNavigate()
     const [username, setUsername] = useState('');
     const handleSubmit = (event) => {
+      const validUsernames = ['admin', 'admin1', 'admin2', 'adminRefresh', 'adminRefresh1', 'adminRefresh2']; 
+      if (!validUsernames.includes(username)){
+          return alert('tên đăng nhập phải là admin, admin1, admin2, adminRefresh, adminRefresh1, adminRefresh2')
+      }
         event.preventDefault();
-        console.log(`Username: ${username} submitted.`);
+        // console.log(`Username: ${username} submitted.`);
         axios.post('https://test-react.agiletech.vn/auth/login',{username:username})
     .then((res)=>{
         console.log(res)

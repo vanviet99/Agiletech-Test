@@ -95,6 +95,7 @@ right: 10%;
     font-size: 24px;
 }
 }
+
 @media only screen and (min-width: 401px) and (max-width: 600px){
     .features_row3 img {
         width: 80%;
