@@ -1,6 +1,5 @@
 .slider-container {
     position: relative;
-    width: 1000px; 
     height: 430px; 
     margin: 0 auto;
     overflow: hidden;
@@ -48,9 +47,40 @@
   }
   
   .dot.active {
-    background-color: #fff; /* Màu cho slide hiện tại */
+    background-color: coral; 
+  }
+  .slider-description {
+    max-width: 800px;
+    margin: 0 auto; 
+    margin:50px 100px 50px 100px;
+}
+  .slider-content img {
+    border-radius: 50px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    width: 80%;
+    margin: 0 auto; 
+    display: block; 
+}
+
+
+@media only screen and (max-width: 600px)
+{
+  .slider-container{
+    height:300px
+  }
+  .slider-button{
+    display: none;
+  }
+  .slider-container {
+    width: 90%;
+
+  }
+  .slider-container img{
+    width: 100%;
+    border-radius: 1px;
   }
   .slider-description{
-    max-width: 800px;
-    margin-left: 55px;
+   margin: 0;
+   padding-top: 20px;
   }
+}

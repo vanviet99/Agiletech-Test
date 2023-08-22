@@ -70,3 +70,45 @@ max-width: 200px;
     letter-spacing: 0.08px;
     margin-right: 30px;
 }
+.features_row1 svg{
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 400px)
+{
+.Features_content{
+    font-size: 12px;
+}
+
+.Features_heading{
+    font-size: 25px;
+}
+.features_row3 img {
+width: 50%;
+}
+.features_row2{
+right: 10%;
+}
+.features_p1{
+    font-size: 24px;
+}
+}
+@media only screen and (min-width: 401px) and (max-width: 600px){
+    .features_row3 img {
+        width: 80%;
+        }
+}
+@media only screen and (min-width: 601px) and (max-width: 800px){
+    .features_row3 img {
+        display: none;
+        }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1024px)
+{
+    .features_row3 img{
+        width: 70%;
+    }
+}

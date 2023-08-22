@@ -14,3 +14,11 @@ padding-top: 50px;
     border-radius: 50px;
     background: var(--3, #9C69E2);
 }
+
+@media only screen and (max-width: 600px)
+{
+    .Testimonials_heading{
+        font-size: 30px;
+        padding-left: 30px;
+    }
+}

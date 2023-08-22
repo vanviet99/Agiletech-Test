@@ -7,9 +7,36 @@ height: 40px;
 width: 150px;
 cursor: pointer;
 color: white;
+margin-left: 20px;
+margin-top: 20px;
 }
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.menu_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .menu_button {
+        margin: 0px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px){
+    .menu_button {
+        margin: 0px;
+    }
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1024px)
+{
+    .menu_button {
+        margin: 0px;
+    }
 }

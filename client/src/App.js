@@ -1,19 +1,18 @@
 import './App.css';
-import Header from './component/Header/Header';
-import Container from '@mui/material/Container';
-import Banner from './component/Banner/Banner';
-import Features from './component/Features/Features';
-import Testimonials from './component/Testimonials/Testimonials';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './component/Home/Home';
+import Profile from './component/Profile/Profile';
+import Signin from './component/Signin/Signin';
 function App() {
   return (
-    <div className="App">
-          <Container maxWidth="lg">
-          <Header></Header>
-          <Banner></Banner>
-          <Features></Features>
-          <Testimonials></Testimonials>
-          </Container>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+        </Route>
+        <Route path='/profile' element={<Profile></Profile>}></Route>
+        <Route path='/login' element={<Signin></Signin>}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
