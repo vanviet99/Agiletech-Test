@@ -187,6 +187,9 @@ const goToPage = (page) => {
     setCurrentPage(page);
   }
 };
+const posst =()=>{
+  nav('/')
+}
 
 const logout = ()=>{
   const accessToken = localStorage.getItem('accessToken');
@@ -212,7 +215,7 @@ const logout = ()=>{
         <rect x="29" width="20" height="35" rx="10" fill="#F063B8"/>
         </svg>
         <div className='profile2_menu'>
-            <button>Post</button>
+            <button onClick={()=>posst()}>Post</button>
             <button onClick={()=>logout()}>LogOut</button>
         </div>
         </Grid>
